@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var pluginListJSON = "//raw.githubusercontent.com/rashedxyz/json-hosting/master/jquery-plugins/plugin-list.json";
+    var pluginListJSON = "//raw.githubusercontent.com/devstown/json-hosting/master/jquery-plugins/plugin-list.json";
 
     //get data from json file
     $.getJSON(pluginListJSON, function (result) {
