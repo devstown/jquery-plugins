@@ -16,15 +16,30 @@ $(document).ready(function () {
                 ' ' +
                 '<a href="' + result[i].pluginGithubURL + '" target="_blank" class="btn btn-dark d-inline-block mb-3"><i class="fab fa-github"></i> Github</a>' +
                 '</div>' +
-                '<a href="' + result[i].pluginCSSDownloadURL + '" class="card-link">Download CSS</a>' +
-                '<a href="' + result[i].pluginJSDownloadURL + '" class="card-link">Download JS</a>' +
+                '<a href="' + result[i].pluginCSSDownloadURL + '" class="card-link downloadCSSLink">Download CSS</a>' +
+                '<a href="' + result[i].pluginJSDownloadURL + '" class="card-link downloadJSLink">Download JS</a>' +
                 '</div>' +
                 '</div>' +
                 '</div>';
 
+
             $('#plugin-container').append(singlePlugin);
 
+            
+
         }
+
+        //remove hashed links
+    
+        var cssLinks = $("#plugin-container .single-plugin a.downloadCSSLink");
+        for(let i=0; i < cssLinks.length; i++){
+             
+            if(cssLinks[i].href == cssLinks[i].baseURI+'#'){
+                $(cssLinks[i]).remove();
+            }
+        }
+
+
 
         //pagination
         $('#plugin-container').paginate({
@@ -45,6 +60,7 @@ $(document).ready(function () {
             $(this).toggle($(this).text().toLowerCase().indexOf(searchKey) > -1);
         });
     });
+
 
 
 });
