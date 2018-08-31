@@ -1,0 +1,45 @@
+// Main Sass File
+
+
+@charset 'UTF-8';
+
+//Configuration and helpers
+@import
+'bootstrap/functions',
+'bootstrap/variables',
+'bootstrap/breakpoints',
+
+'fontawesome/fa-brands',
+'fontawesome/fa-regular',
+'fontawesome/fa-solid',
+'fontawesome/fontawesome',
+
+'abstracts/functions',
+'abstracts/variables',
+'abstracts/mixins';
+
+
+//Base stuff
+@import
+'base/general',
+'base/resets',
+'base/typography',
+'base/global',
+'base/fonts',
+'base/helpers';
+
+// Layout-related sections
+@import
+'layout/header',
+'layout/footer';
+
+// Components
+@import
+'components/button';
+
+// Page-specific styles
+@import
+'pages/home';
+
+
+

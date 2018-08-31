@@ -1,0 +1,76 @@
+/* ================ homepage style ================== */
+.plugin-section{
+    h2.section-title{
+        position: relative;
+        display: inline-block;
+        padding-bottom: 1.5rem;
+
+        &:before{
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #999;
+            content: "";
+        }
+
+        &:after{
+            position: absolute;
+            bottom: 0;
+            left: 80%;
+            margin-left: -40%;
+            width: 20%;
+            height: 10px;
+            background-color: #007BFF;
+            content: "";
+        }
+    }
+    .search-box{
+        
+        input{
+            position: relative;
+        }
+
+        i.fas{
+            position: absolute;
+            top: 10px;
+            right: 30px;
+        }
+    }
+    .plugin-container{
+        .single-plugin{
+            flex-basis: 24.1%;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            text-align: center;
+    
+            h6.card-subtitle{
+                height: 45px;
+                line-height: 20px;
+            }
+
+            &:nth-child(4n){
+                margin-right: 0;
+            }
+
+            .card{
+                transition: 0.3s;
+            }
+
+            &:hover{
+                .card{
+                    border: 1px solid #007BFF;
+                }
+            }
+            
+        }
+    }
+
+    nav.paginate-pagination{
+        text-align: center;
+        ul{
+            display: inline-block;
+        }
+    }
+}
